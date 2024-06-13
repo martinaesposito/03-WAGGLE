@@ -14,6 +14,7 @@ L’applicazione permette di creare una card del proprio amico a quattro zampe e
 
 - L'app funziona solo su Android
 - È ancora un prototipo per tanto non tutte le funzioni sono disponibili (ma lo saranno presto!)
+- Una volta fatto WAGGLE, refreshare la pagina per procedere con il successivo :')
 
 ---
 
