@@ -1,0 +1,61 @@
+#ctn {
+  align-items: center;
+  justify-content: center;
+}
+
+/* logo */
+#logo-ctn {
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* progress bar */
+#progress-ctn {
+  padding: calc(var(--pixelH));
+  background-color: #f4f1e9;
+}
+/* contenuto della barra di caricamento */
+.progress {
+  width: 100%;
+  height: 100%;
+  background: black;
+  -webkit-animation: move 0.2s;
+  animation: move 2s;
+}
+
+/* next */
+#next {
+  display: none;
+  margin-left: auto;
+}
+
+/* full screen */
+#zzz {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 100;
+}
+
+/* animation di caricamento */
+@-webkit-keyframes move {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes move {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}

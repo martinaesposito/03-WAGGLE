@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+    maximum-scale=1, user-scalable=no"
+    />
+
+    <link rel="icon" type="image/x-icon" href="assets/elements/favicon.ico" />
+    <title>LOGIN</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/suc3xtc.css" />
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER DI TUTTO -->
+    <div id="sfondo-ctn">
+      <div id="ctn">
+        <!-- SEZIONI -->
+        <div id="sezioni" class="flex-col">
+          <div id="info" class="sezioni text selected-right">INFO</div>
+          <div id="aspetto" class="sezioni text unselected">ASPETTO</div>
+        </div>
+        <!-- FORM -->
+        <form id="form">
+          <!--INFO-->
+          <div id="info-options" class="flex-col sezioni-options">
+            <label for="umano" class="text">UMANO:</label>
+            <input
+              type="text"
+              id="umano"
+              name="umano"
+              class="border text"
+              placeholder="Sarah"
+            />
+
+            <label for="cane" class="text">CANE:</label>
+            <input
+              type="text"
+              id="cane"
+              name="cane"
+              class="border text"
+              placeholder="Timmy"
+            />
+            <div id="sesso-eta">
+              <div class="flex-col sesso-eta" id="eta-ctn">
+                <label for="eta" class="text">ETÀ:</label>
+                <select id="eta" name="eta" class="text" value=""></select>
+              </div>
+              <div class="flex-col sesso-eta" id="sesso-ctn">
+                <label for="sesso" class="text">SESSO:</label>
+                <div class="opt-container" id="sesso"></div>
+              </div>
+            </div>
+
+            <label for="bio" class="text">BIO:</label>
+            <textarea
+              type="text"
+              id="bio"
+              name="bio"
+              class="border text"
+              placeholder="Timmy è un cane socievole e simpatico in cerca di nuovi amici!"
+              form="form"
+              maxlength="150"
+              minlength="1"
+              value=""
+              required
+            ></textarea>
+          </div>
+
+          <!--  ASPETTO-->
+          <div id="aspetto-options" class="flex-col sezioni-options hidden">
+            <!-- PREVIEW-->
+            <div id="preview" class="flex-col">
+              <img src="assets/images/cane-waggle.png" id="img-preview" />
+            </div>
+
+            <!-- SIZE -->
+            <label for="size" class="text">TAGLIA:</label>
+            <div class="opt-container" id="size"></div>
+            <!-- RAZZA -->
+            <label for="razza" class="text">RAZZA:</label>
+            <select id="razza" class="text" value="" required></select>
+
+            <!-- COLORE -->
+            <label for="color" class="text">COLORE CARD:</label>
+            <div class="opt-container" id="color"></div>
+          </div>
+        </form>
+
+        <!-- ok -->
+        <div id="ok" class="ctn flex-col">
+          <!-- <button class="btn" type="submit">
+            <a href="match.html" class="text"> OK </a>
+          </button> -->
+          <input type="submit" name="ok" id="ok" class="btn text" value="OK" />
+        </div>
+      </div>
+    </div>
+
+    <script src="cssvars.js"></script>
+    <script src="form.js"></script>
+  </body>
+</html>

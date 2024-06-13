@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+    maximum-scale=1, user-scalable=no"
+    />
+
+    <link rel="icon" type="image/x-icon" href="assets/elements/favicon.ico" />
+    <title>CARD</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/card.css" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/suc3xtc.css" />
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER DI TUTTO -->
+    <div id="sfondo-ctn">
+      <div id="ctn">
+        <div class="txt-center text">LA MIA CARD</div>
+        <!-- modifica -->
+        <button id="modifica" class="btn text">
+          <img id="mod-png" src="assets/elements/MODIFICA.png" />
+        </button>
+
+        <!-- CARD -->
+        <div id="card-ctn" class="flex-col"></div>
+
+        <button id="back" class="btn text">
+          <img class="arrow" src="assets/elements/ARROW.svg" />
+        </button>
+        <button id="ok" class="btn text hidden">OK</button>
+      </div>
+    </div>
+
+    <script src="cssvars.js"></script>
+    <script src="card.js"></script>
+  </body>
+</html>

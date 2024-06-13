@@ -1,0 +1,32 @@
+#guardaroba-elements-ctn {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#back {
+  margin-top: auto;
+}
+
+.guardaroba-elements {
+  outline: solid black calc(var(--pixelH) * 0.5);
+}
+
+img {
+  pointer-events: all;
+}
+.img-ctn {
+  position: absolute;
+  top: calc(var(--pixelH) * 8);
+  width: var(--wwwidth);
+  height: calc(var(--pixelH) * 62);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  padding-top: calc(var(--pixelH) * 4);
+  padding-bottom: calc(var(--pixelH) * 6);
+}

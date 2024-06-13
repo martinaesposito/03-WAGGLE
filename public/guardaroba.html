@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+    maximum-scale=1, user-scalable=no"
+    />
+
+    <link rel="icon" type="image/x-icon" href="assets/elements/favicon.ico" />
+    <title>IL MIO GUARDAROBA</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/guardaroba.css" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/suc3xtc.css" />
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER DI TUTTO -->
+    <div id="sfondo-ctn">
+      <div id="ctn">
+        <!-- GUARDAROBA -->
+
+        <div id="guardaroba-title" class="text txt-center">GUARDAROBA</div>
+        <!-- Preview cane -->
+        <div id="dog-ctn">
+          <img id="doggo" src="assets/images/home.png" />
+        </div>
+        <!-- GUARDAROBA CTN -->
+        <div id="guardaroba-ctn">
+          <!-- GUARDAROBA OPTIONS-->
+          <div id="guardaroba-opt">
+            <img
+              id="vestito"
+              class="guardaroba-opt"
+              src="assets/elements/guardaroba/VESTITO.png"
+            />
+            <img
+              id="accessorio"
+              class="guardaroba-opt"
+              src="assets/elements/guardaroba/ACCESSORIO.png"
+            />
+            <img
+              id="oggetto"
+              class="guardaroba-opt"
+              src="assets/elements/guardaroba/OGGETTO.png"
+            />
+            <img
+              id="mossa"
+              class="guardaroba-opt"
+              src="assets/elements/guardaroba/MOSSA.png"
+            />
+          </div>
+          <!-- ELEMENTS -->
+          <div id="guardaroba-elements-ctn" class="border"></div>
+        </div>
+        <!-- BACK BTN -->
+        <button id="back" class="btn text">
+          <img class="arrow" src="assets/elements/ARROW.svg" />
+        </button>
+      </div>
+    </div>
+
+    <script src="cssvars.js"></script>
+    <script src="guardaroba.js"></script>
+  </body>
+</html>

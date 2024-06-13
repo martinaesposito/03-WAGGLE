@@ -1,0 +1,17 @@
+#waggles-ctn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  column-gap: calc(2 * var(--pixelW));
+  padding: calc(3 * var(--pixelW));
+  row-gap: calc(6 * var(--pixelW));
+  justify-content: space-between;
+  /* mix-blend-mode: multiply;
+  background-color: #d9cfb5;
+
+  border-top: #888272 solid var(--pixelH);
+
+  outline: black solid var(--pixelH); */
+}

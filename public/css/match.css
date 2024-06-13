@@ -1,0 +1,236 @@
+body,
+html {
+  overflow: hidden;
+}
+
+#ctn {
+  width: 100%;
+  background: none;
+  position: absolute;
+}
+.sfondo {
+  z-index: -100;
+  /* opacity: 30%; */
+}
+
+.canvactn {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+/* .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  width: 50%;
+  height: fit-content;
+  padding: 2svh;
+
+  z-index: 1000;
+} */
+
+/* DROPDOWN */
+
+.btn {
+  border: none;
+  background: none;
+  padding: 0%;
+}
+.btn:active {
+  border: none;
+  background: none;
+  padding: 0%;
+}
+/* tutti tranne lascia a cui riapplico le stesse cose */
+#lascia,
+#apri,
+#waggle-btn {
+  display: block;
+  border: black solid calc(var(--pixelH));
+  border-bottom: black solid calc(var(--pixelH) * 2);
+  padding: calc(var(--pixelH) * 2);
+  color: black;
+  width: fit-content;
+}
+
+#waggle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 150;
+  justify-content: center;
+  text-align: center;
+}
+
+#waggle-txt {
+  color: black;
+}
+
+#waggle-animation-ctn,
+#heart-btn {
+  position: absolute;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+/* MENU CONTAINER */
+#menu-container {
+  position: absolute;
+  left: calc((100vw - var(--wwwidth)) / 2);
+  top: calc(11 * var(--pixelH));
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  gap: 8px;
+}
+
+#profile {
+  z-index: 5;
+}
+
+.menu-opt {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  top: calc(11 * var(--pixelH));
+}
+
+#osso {
+  position: absolute;
+  right: calc((100vw - var(--wwwidth)) / 2);
+  top: calc(var(--hhheight) / 2 + 11px);
+}
+
+#gallery {
+  position: absolute;
+  top: calc(11 * var(--pixelH));
+  right: calc((100vw - var(--wwwidth)) / 2);
+}
+
+#countdown {
+  position: absolute;
+}
+@keyframes showMenu {
+  from {
+    opacity: 0;
+    height: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    height: calc(var(--pixelH) * 16); /* Set to the desired height */
+    transform: translateY(var(--top-position));
+  }
+}
+
+@keyframes hideMenu {
+  from {
+    opacity: 1;
+    height: calc(var(--pixelH) * 16); /* Match the desired height */
+    transform: translateY(var(--top-position));
+  }
+  to {
+    opacity: 0;
+    height: 0;
+    transform: translateY(0);
+  }
+}
+
+.show {
+  display: block;
+  animation: showMenu 0.5s ease-in-out forwards;
+}
+
+.hide {
+  animation: hideMenu 0.5s ease-in-out forwards;
+  display: block; /* Maintain block display during animation */
+}
+
+/* MAPPA DEZOOM */
+#mappa-dezoom {
+  position: absolute;
+  bottom: calc(var(--pixelH) * 13);
+  left: calc((100vw - var(--wwwidth)) / 2);
+}
+
+/* DIV DI CREAZIONE DEL MESSAGGIO */
+.osso-pos {
+  z-index: 100;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.close {
+  margin-left: auto;
+}
+
+/* ANIMAZIONI */
+.animation1 {
+  animation: enter1 1s ease-in-out forwards;
+}
+
+.animation2 {
+  animation: enter2 1s ease-in-out forwards;
+}
+
+.animation3 {
+  animation: enter3 1s ease-in-out forwards;
+}
+
+.exit {
+  animation: exit 1s ease-in-out forwards;
+}
+
+@keyframes exit {
+  from {
+    opacity: 1; /* Start from outside the screen */
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes enter3 {
+  from {
+    left: 120%; /* Start from outside the screen */
+  }
+  to {
+    left: calc((100vw - var(--wwwidth)) / 2); /* End at the center */
+  }
+}
+
+@keyframes enter1 {
+  from {
+    right: 120%; /* Start from outside the screen */
+  }
+  to {
+    right: 51%; /* End at the center */
+  }
+}
+
+@keyframes enter2 {
+  from {
+    left: 120%; /* Start from outside the screen */
+  }
+  to {
+    left: 51%; /* End at the center */
+  }
+}

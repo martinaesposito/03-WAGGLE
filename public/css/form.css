@@ -1,0 +1,112 @@
+#sfondo-ctn {
+  background-color: #d9cfb5;
+}
+#ctn {
+  height: var(--hhheight);
+  width: 100vw;
+}
+
+/* SEZIONI IN ALTO */
+#sezioni {
+  height: fit-content;
+  flex-direction: row;
+  align-items: center;
+}
+
+[class*="selected"] {
+  border: #f4f1e9 solid calc(var(--pixelH));
+  background-color: #f4f1e9;
+  border-top: black solid calc(var(--pixelH));
+}
+
+[class*="unselected"] {
+  border: #d9cfb5 solid calc(var(--pixelH));
+  background-color: #d9cfb5;
+  border-bottom: black solid calc(var(--pixelH));
+}
+[class*="-left"] {
+  border-left: black solid calc(var(--pixelH));
+}
+[class*="-right"] {
+  border-right: black solid calc(var(--pixelH));
+}
+
+/* SEZIONI OPT*/
+input {
+  height: calc(var(--pixelH) * 14);
+}
+
+.sezioni {
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  /* line-height: calc(var(--pixelH) * 16); */
+  line-height: calc(var(--pixelH) * 15);
+}
+
+.sezioni-options {
+  padding: 0 calc((100vw - var(--wwwidth)) / 2);
+  padding-bottom: calc(var(--pixelH) * 4);
+  background-color: #f4f1e9;
+  border-bottom: black solid calc(var(--pixelH));
+  min-height: calc(var(--pixelH) * 138);
+}
+
+label {
+  padding-top: calc(var(--pixelH) * 1);
+}
+
+#eta {
+  width: 100%;
+}
+
+.sesso-btn {
+  padding: calc(var(--pixelH) * 2);
+  height: calc(var(--pixelH) * 15);
+}
+#sesso-eta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#sesso {
+  flex-direction: row-reverse;
+}
+.sesso-eta {
+  max-width: 50%;
+}
+
+#M.btn-active.sesso-btn {
+  background-color: #85beff;
+}
+#F.btn-active.sesso-btn {
+  background-color: #ffc4f6;
+}
+
+#img-preview {
+  /* width: calc(var(--pixelW) * 41); */
+  display: block;
+  margin: auto;
+  margin-bottom: calc(var(--pixelH) * 2);
+}
+#razza {
+  width: 100%;
+}
+
+#bio {
+  height: calc(var(--pixelH) * 41);
+}
+
+.opt-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: calc(var(--pixelW) * 2);
+}
+
+button.btn {
+  text-align: center;
+  height: calc(var(--pixelH) * 15);
+  width: calc(var(--pixelH) * 14);
+}

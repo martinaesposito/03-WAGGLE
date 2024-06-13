@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1,
+    maximum-scale=1, user-scalable=no"/>
+
+    <title>HOME</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/x-icon" href="assets/elements/favicon.ico">
+
+    <!-- FONT -->
+    <link rel="stylesheet" href="https://use.typekit.net/suc3xtc.css" />
+
+    <!-- LIBRARIES -->
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/geolib@3.3.4/lib/index.min.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER DI TUTTO -->
+    <div id="sfondo-ctn">
+      <div id="ctn">
+        <!-- CARICAMENTO -->
+        <div class="flex-col center">
+          <div id="logo-ctn" class="flex-col">
+            <img id="doggo" src="assets/images/home.png" />
+
+            <div id="progress-ctn" class="border">
+              <div class="progress"></div>
+            </div>
+            <p id="loading" class="text">loading</p>
+          </div>
+        </div>
+
+        <!-- NEWSPAPER -->
+        <div class="flex-col border" id="newspaper-ctn">
+          <div id="newspaper" class="flex-col">
+            <p class="text headline txt-center">SEMPIONE</br> NEWS</p>
+            <p class="text flex-col" id="content">
+              <span>Benvenuto su WAGGLE!</span>
+              <span>Con WAGGLE puoi trovare amici per te
+              e per il tuo cane a Parco Sempione!</span>
+            <span>Per prima cosa crea il profilo!</span></p>
+          </div>
+
+          <div id="next-pages">
+            <div id="pages"></div>
+          </div>
+        </div>
+
+        <!-- NEXT -->
+        <div id="next" class="ctn flex-col">
+          <button class="btn">
+            <a href="form.html" class="text"> OK </a>
+          </button>
+        </div>
+       
+      </div>
+    </div>
+
+<!-- FULL SCREEN -->
+    <!-- <button id="zzz" onclick="openFullscreen();">Open Fullscreen</button> -->
+
+    <script src="cssvars.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>
+

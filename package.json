@@ -1,0 +1,27 @@
+{
+  "name": "p5-node-2022",
+  "version": "1.0.0",
+  "description": "Webapp to meet new dog owners",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikima/p5-node-2021.git"
+  },
+  "author": "Gruppo 3 (ma siamo in 4)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikima/p5-node-2021/issues"
+  },
+  "homepage": "https://github.com/mikima/p5-node-2021#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "geolib": "^3.3.4",
+    "gps-distance": "^0.0.4",
+    "openai": "^4.42.0",
+    "socket.io": "^4.3.2"
+  }
+}

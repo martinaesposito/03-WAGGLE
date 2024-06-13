@@ -1,0 +1,8 @@
+{
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa",
+  "display": "fullscreen",
+  "name": "WAGGLE",
+  "short_name": "WAGGLE",
+  "start_url": "index.html"
+}

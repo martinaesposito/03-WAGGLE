@@ -1,0 +1,255 @@
+:root {
+  /* --hhheight: calc(var(--html-height) - 22 * (var(--html-height) / 172));
+  --wwwidth: calc((var(--html-height) - 22 * (var(--html-height) / 172)) * 0.46); */
+  --pixelW: calc(var(--wwwidth) / 80);
+  --pixelH: calc(var(--hhheight) / 172);
+
+  font-size: 16px;
+}
+
+html,
+body {
+  font-size: 16px;
+  border-radius: 0;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea[type="text"] {
+  font-size: 2rem;
+  font-size: calc(var(--pixelH) * 8);
+}
+
+input {
+  font-size: 2rem;
+  font-size: calc(var(--pixelH) * 8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+/* CONTENITORE GENERALE DI TUTTI I MIEI ELEMENTI CON LE PROP PERFETTE */
+#sfondo-ctn {
+  height: var(--html-height);
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  background-color: #e8e6cd;
+  background-color: #298eff;
+  background-color: #f4f1e9;
+}
+
+#ctn {
+  box-sizing: border-box;
+  position: relative;
+  height: var(--html-height);
+
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+  /* background-color: aqua; */
+}
+
+/* ELEMENTI */
+::-webkit-scrollbar-thumb {
+  background: black;
+  -webkit-background: black;
+}
+canvas {
+  display: block;
+  z-index: -2;
+}
+
+a {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+/* CLASSI CONDIVISE */
+.text {
+  font-family: "lores-9-narrow", Courier, monospace;
+  font-weight: 400;
+  font-style: normal;
+  /* color: #2400ff; */
+  /* : max(calc(var(--pixelH) * 8), 16px); */
+  font-size: 2rem;
+  font-size: calc(var(--pixelH) * 8);
+  line-height: 2.25rem;
+  line-height: calc(var(--pixelH) * 9);
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+}
+
+.border {
+  border: black solid calc(var(--pixelH));
+}
+
+::placeholder {
+  color: #cdcdcd;
+}
+.btn,
+select {
+  height: calc(var(--pixelH) * 14);
+  min-width: calc(var(--pixelW) * 2);
+  background-color: white;
+  display: block;
+  border: black solid calc(var(--pixelH));
+  border-bottom: black solid calc(var(--pixelH) * 2);
+  padding: calc(var(--pixelH));
+  color: black;
+  width: fit-content;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  padding: calc(var(--pixelH) * 2);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-top: black solid calc(var(--pixelH) * 2);
+  outline: none;
+}
+
+datalist {
+  outline: none;
+}
+
+/* input[type="text"]:invalid,
+input[type="number"]:invalid {
+  border: red;
+} */
+
+.btn:active,
+.btn-active {
+  border: black solid calc(var(--pixelH));
+  transform: translateY(calc(var(--pixelH) / 2));
+}
+
+select:focus {
+  outline: none;
+}
+
+/* ELEMENTI SPECIFICI COMUNI A PIù PAGINE */
+
+/* newspaper */
+#newspaper-ctn {
+  display: none;
+  background-color: white;
+}
+
+.headline {
+  font-family: "lores-15-bold-alt-oakland", sans-serif;
+  /* font-size: max(calc(var(--pixelH) * 15), 16px); */
+  font-size: 3.75rem;
+  font-size: calc(var(--pixelH) * 15);
+  line-height: 3.25rem;
+  line-height: calc(var(--pixelH) * 12);
+  /* line-height: max(calc(var(--pixelH) * 12), 16px); */
+}
+
+#next-pages {
+  /* height: fit-content; */
+  padding: calc(var(--pixelH));
+  padding-right: 0;
+  background-color: #cdcdcd;
+  border-top: calc(var(--pixelH)) solid #000;
+}
+
+#pages {
+  width: 100%;
+  height: calc(var(--pixelH));
+  background: black;
+}
+
+#back {
+  margin-right: auto;
+  transform: scaleX(-1);
+}
+
+#ok {
+  margin: auto;
+}
+
+/* card */
+
+.arrow {
+  height: calc(var(--pixelH) * 7);
+  width: calc(var(--pixelH) * 8);
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.invalid {
+  border-color: red;
+}

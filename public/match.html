@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+    maximum-scale=1, user-scalable=no"
+    />
+
+    <link rel="icon" type="image/x-icon" href="assets/elements/favicon.ico" />
+
+    <title>MAPPA</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/match.css" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/suc3xtc.css" />
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/geolib@3.3.4/lib/index.min.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER DI TUTTO -->
+    <div id="ctn">
+      <!-- MENU -->
+      <div id="menu-container">
+        <button id="profile" class="btn text flex-col">
+          <img
+            id="profile-img"
+            src="assets/images/cani-profile/BASSOTTO-MASK.png"
+          />
+        </button>
+        <button id="modifica" class="btn text menu-opt flex-col hide">
+          <img class="menu-img" src="assets/elements/PROFILE_ICON.png" />
+        </button>
+        <button id="guardaroba" class="btn text menu-opt flex-col hide">
+          <img class="menu-img" src="assets/elements/GUARDAROBA_ICON.png" />
+        </button>
+        <button id="news" class="btn text menu-opt flex-col hide">
+          <img class="menu-img" src="assets/elements/NEWS_ICON.png" />
+        </button>
+      </div>
+
+      <!-- MAPPA DEZOOM -->
+      <button id="mappa-dezoom" class="btn text">
+        <img class="btn-img" src="assets/elements/MAP_ICON.png" />
+      </button>
+
+      <!-- OSSO CREATE BTN -->
+      <button id="osso" class="btn text">
+        <img class="btn-img" src="assets/elements/OSSO_ICON.png" />
+      </button>
+      <!-- OSSO CREATE DIV-->
+      <form id="osso-message" class="flex-col osso-pos hidden">
+        <button id="close-osso-create" class="btn text close">
+          <img class="btn-img" src="assets/elements/BUTT_X.png" />
+        </button>
+        <textarea
+          autocomplete="off"
+          id="text-osso"
+          class="text border"
+          placeholder="Lascia un osso! Scrivi un messaggio o scegli un regalo da nascondere nel parco"
+        ></textarea>
+        <img id="regalo" src="assets/elements/REGALO_ICON.png" />
+        <button type="submit" id="lascia" class="text border">LASCIA</button>
+      </form>
+
+      <!-- OSSO FOUND DIV-->
+      <div id="osso-found" class="flex-col osso-pos hidden">
+        <button id="close-osso-found" class="btn text close">
+          <img class="btn-img" src="assets/elements/BUTT_X.png" />
+        </button>
+        <div class="border flex-col" id="osso-warn">
+          <div id="osso-message-txt" class="text txt-center">
+            HAI TROVATO UN OSSO!
+          </div>
+          <img id="osso-found-icon" src="assets/elements/OSSO_FOUND_ICON.png" />
+        </div>
+        <button type="button" id="apri" class="text border">APRI</button>
+      </div>
+
+      <!-- WAGGLE GALLERY-->
+      <button id="gallery" class="btn text">
+        <img class="btn-img" src="assets/elements/WAGGLES_ICON.png" />
+      </button>
+
+      <!-- WAGGLE DIV-->
+      <!-- domanda e risposta -->
+      <div id="waggle-ctn" class="flex-col osso-pos hidden">
+        <button type="button" id="close-waggle" class="btn text close">
+          <img class="btn-img" src="assets/elements/BUTT_X.png" />
+        </button>
+        <div class="border flex-col" id="waggle-warn">
+          <div id="waggle-warn-txt" class="text txt-center"></div>
+          <img
+            id="waggle-user-img"
+            class="margin-auto"
+            src="assets/images/cani/BASSOTTO.gif"
+          />
+          <div id="countdown" class="text hidden"></div>
+        </div>
+        <button type="button" id="waggle-btn" class="text border">
+          WAGGLE
+        </button>
+      </div>
+      <!-- animazione effettiva -->
+      <div id="waggle" class="hidden">
+        <div id="waggle-animation-ctn" class="flex-col margin-auto">
+          <img id="waggle-me-img" class="margin-auto" src="" />
+          <div id="waggle-txt" class="text txt-center">
+            CLICCA IL CUORE PER FARE WAGGLE!
+          </div>
+        </div>
+        <button type="button" id="heart-btn" class="btn text margin-auto">
+          <img
+            class="btn-img"
+            id="heart-btn-img"
+            src="assets/elements/HEART_ICON.png"
+          />
+        </button>
+      </div>
+
+      <button type="button" id="ok" class="btn text margin-auto hidden">
+        OK
+      </button>
+      <!-- CTN -->
+    </div>
+
+    <script src="cssvars.js"></script>
+    <script src="ui.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
